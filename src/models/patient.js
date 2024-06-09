@@ -5,7 +5,7 @@ const PatientSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     dt_nasc: { type: Date, required: true, default: Date.now, alias: 'dtNasc' }, 
-    password: { type: String, required: true, select: false },
+    password: { type: String, required: false, select: false },
 }, { collection: 'tbl_patient' })
 
 export default mongoose.model.Patient || mongoose.model("Patient", PatientSchema)

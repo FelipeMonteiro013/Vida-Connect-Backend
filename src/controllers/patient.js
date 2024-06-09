@@ -12,8 +12,8 @@ const router = Router();
 
 router.get("/", async (req, res) => {
   try {
-    const userList = await listPatients();
-    res.status(200).send(userList);
+    const patientList = await listPatients();
+    res.status(200).send(patientList);
   } catch (error) {
     res.status(400).send(error);
   }
@@ -21,16 +21,16 @@ router.get("/", async (req, res) => {
 
 router.post("/", async (req, res) => {
   try {
-    const user = await createPatient(req.body);
-    res.status(201).send(user);
+    const patient = await createPatient(req.body);
+    res.status(201).send(patient);
   } catch (error) {
     res.status(400).send(error);
   }
 });
 
-router.delete("/:userId", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   try {
-    await deletePatient(req.params.userId);
+    await deletePatient(req.params.id);
     res.send();
   } catch (error) {
     res.status(400).send(error);
@@ -48,8 +48,8 @@ router.put("/:id", async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const user = await findPatientById(req.params.id);
-    res.status(200).send(user);
+    const patient = await findPatientById(req.params.id);
+    res.status(200).send(patient);
   } catch (error) {
     res.status(400).send(error);
   }

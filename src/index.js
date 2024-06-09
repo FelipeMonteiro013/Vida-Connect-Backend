@@ -8,11 +8,13 @@ import clinicController from './controllers/clinic'
 import doctorController from './controllers/doctor'
 import examController from './controllers/exam'
 import bodyParser from 'body-parser'
+import cors from "cors"
 
 const app = express()
 const port = 3000
 
 app.use(bodyParser.json())
+app.use(cors());
 
 app.use("/patient", patientController)
 app.use("/employee", employeeController)
