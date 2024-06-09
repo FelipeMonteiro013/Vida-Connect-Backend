@@ -1,0 +1,836 @@
+{
+	"info": {
+		"_postman_id": "4f1f6d38-258f-4802-9676-4f69061b438e",
+		"name": "Vida Connect",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14676437"
+	},
+	"item": [
+		{
+			"name": "Patient",
+			"item": [
+				{
+					"name": "List Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"document\": \"123.456.789-01\",\r\n        \"name\": \"João Silva\",\r\n        \"email\": \"joao.silva@example.com\",\r\n        \"dt_nasc\": \"1980-05-15\",\r\n        \"password\": \"senha123\"\r\n    },\r\n    {\r\n        \"document\": \"987.654.321-02\",\r\n        \"name\": \"Maria Santos\",\r\n        \"email\": \"maria.santos@example.com\",\r\n        \"dt_nasc\": \"1992-10-30\",\r\n        \"password\": \"senha456\"\r\n    },\r\n    {\r\n        \"document\": \"456.789.123-03\",\r\n        \"name\": \"Carlos Oliveira\",\r\n        \"email\": \"carlos.oliveira@example.com\",\r\n        \"dt_nasc\": \"1975-08-20\",\r\n        \"password\": \"senha789\"\r\n    },\r\n    {\r\n        \"document\": \"321.654.987-04\",\r\n        \"name\": \"Ana Souza\",\r\n        \"email\": \"ana.souza@example.com\",\r\n        \"dt_nasc\": \"1988-03-05\",\r\n        \"password\": \"senhaabc\"\r\n    },\r\n    {\r\n        \"document\": \"789.321.654-05\",\r\n        \"name\": \"Pedro Costa\",\r\n        \"email\": \"pedro.costa@example.com\",\r\n        \"dt_nasc\": \"1996-12-10\",\r\n        \"password\": \"senhaxyz\"\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/patient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"patient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Patient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"123.456.789-01\",\r\n    \"name\": \"João Silva\",\r\n    \"email\": \"joao.silva@example.com\",\r\n    \"dt_nasc\": \"1980-05-15\",\r\n    \"password\": \"senha123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/patient/6664f8b56c8e1228ff07fc5b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"patient",
+								"6664f8b56c8e1228ff07fc5b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/6664999f36ef48dcf4843364",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"6664999f36ef48dcf4843364"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Patient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/patients/66646493edde035fb2d8a1d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"patients",
+								"66646493edde035fb2d8a1d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"felipe@employee.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/patient/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"patient",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type Medical Examination",
+			"item": [
+				{
+					"name": "List Type Medical Examination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/typeMedicalExamination",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"typeMedicalExamination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Type Medical Examination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Hemograma Completo\"\r\n    },\r\n    {\r\n        \"name\": \"Glicemia de Jejum\"\r\n    },\r\n    {\r\n        \"name\": \"Colesterol Total e Frações\"\r\n    },\r\n    {\r\n        \"name\": \"Triglicerídeos\"\r\n    },\r\n    {\r\n        \"name\": \"Ureia e Creatinina\"\r\n    },\r\n    {\r\n        \"name\": \"Exame de Urina\"\r\n    },\r\n    {\r\n        \"name\": \"TSH (Hormônio Estimulante da Tireoide)\"\r\n    },\r\n    {\r\n        \"name\": \"T4 Livre\"\r\n    },\r\n    {\r\n        \"name\": \"Eletrocardiograma (ECG)\"\r\n    },\r\n    {\r\n        \"name\": \"Raio-X de Tórax\"\r\n    },\r\n    {\r\n        \"name\": \"Tomografia Computadorizada\"\r\n    },\r\n    {\r\n        \"name\": \"Ressonância Magnética\"\r\n    },\r\n    {\r\n        \"name\": \"Ultrassonografia\"\r\n    },\r\n    {\r\n        \"name\": \"Mamografia\"\r\n    },\r\n    {\r\n        \"name\": \"Papanicolau\"\r\n    },\r\n    {\r\n        \"name\": \"Prova de Função Pulmonar\"\r\n    },\r\n    {\r\n        \"name\": \"Teste Ergométrico\"\r\n    },\r\n    {\r\n        \"name\": \"Ecocardiograma\"\r\n    },\r\n    {\r\n        \"name\": \"Endoscopia Digestiva Alta\"\r\n    },\r\n    {\r\n        \"name\": \"Colonoscopia\"\r\n    },\r\n    {\r\n        \"name\": \"Exame de Fezes\"\r\n    },\r\n    {\r\n        \"name\": \"Cintilografia\"\r\n    },\r\n    {\r\n        \"name\": \"Densitometria Óssea\"\r\n    },\r\n    {\r\n        \"name\": \"Eletroencefalograma (EEG)\"\r\n    },\r\n    {\r\n        \"name\": \"Holter 24 Horas\"\r\n    },\r\n    {\r\n        \"name\": \"Mapa (Monitorização Ambulatorial da Pressão Arterial)\"\r\n    },\r\n    {\r\n        \"name\": \"Audiometria\"\r\n    },\r\n    {\r\n        \"name\": \"Teste de Esforço Cardiopulmonar\"\r\n    },\r\n    {\r\n        \"name\": \"Sorologia para Hepatites\"\r\n    },\r\n    {\r\n        \"name\": \"Exame de PPD (Teste Tuberculínico)\"\r\n    },\r\n    {\r\n        \"name\": \"Ferritina\"\r\n    },\r\n    {\r\n        \"name\": \"Vitamina D\"\r\n    },\r\n    {\r\n        \"name\": \"PCR (Proteína C Reativa)\"\r\n    },\r\n    {\r\n        \"name\": \"Albumina\"\r\n    },\r\n    {\r\n        \"name\": \"Bilirrubina Total e Frações\"\r\n    },\r\n    {\r\n        \"name\": \"Ácido Úrico\"\r\n    },\r\n    {\r\n        \"name\": \"Cálcio Total\"\r\n    },\r\n    {\r\n        \"name\": \"Cálcio Ionizado\"\r\n    },\r\n    {\r\n        \"name\": \"Hormônio Paratireoideano (PTH)\"\r\n    },\r\n    {\r\n        \"name\": \"Antígeno Prostático Específico (PSA)\"\r\n    },\r\n    {\r\n        \"name\": \"Anticorpos Anti-HCV (Hepatite C)\"\r\n    },\r\n    {\r\n        \"name\": \"HIV 1 e 2\"\r\n    },\r\n    {\r\n        \"name\": \"Rubéola - IgG e IgM\"\r\n    },\r\n    {\r\n        \"name\": \"Toxoplasmose - IgG e IgM\"\r\n    },\r\n    {\r\n        \"name\": \"CMV (Citomegalovírus) - IgG e IgM\"\r\n    },\r\n    {\r\n        \"name\": \"Fator Reumatoide\"\r\n    },\r\n    {\r\n        \"name\": \"Anticorpos Antinucleares (ANA)\"\r\n    },\r\n    {\r\n        \"name\": \"Beta-HCG (Gravidez)\"\r\n    },\r\n    {\r\n        \"name\": \"Tipagem Sanguínea\"\r\n    },\r\n    {\r\n        \"name\": \"Cultura de Urina\"\r\n    },\r\n    {\r\n        \"name\": \"Cultura de Fezes\"\r\n    },\r\n    {\r\n        \"name\": \"Exame de Coagulação (TP e TTPA)\"\r\n    },\r\n    {\r\n        \"name\": \"D-dímero\"\r\n    },\r\n    {\r\n        \"name\": \"Teste de Intolerância à Lactose\"\r\n    },\r\n    {\r\n        \"name\": \"Teste de Intolerância ao Glúten\"\r\n    },\r\n    {\r\n        \"name\": \"Hemoglobina Glicada\"\r\n    },\r\n    {\r\n        \"name\": \"Teste de Tolerância à Glicose\"\r\n    },\r\n    {\r\n        \"name\": \"Proteína na Urina de 24 Horas\"\r\n    },\r\n    {\r\n        \"name\": \"Análise de Líquido Cefalorraquidiano (LCR)\"\r\n    },\r\n    {\r\n        \"name\": \"Teste Genético\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/typeMedicalExamination",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"typeMedicalExamination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Type Medical Examination",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Ureia e Creatinina\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/typeMedicalExamination/6665aa00d8c2a5d18e6f0102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"typeMedicalExamination",
+								"6665aa00d8c2a5d18e6f0102"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medical Specialty",
+			"item": [
+				{
+					"name": "List Medical Specialty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medicalSpecialty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalSpecialty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Medical Specialty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    { \"name\": \"Cardiologia\" },\r\n    { \"name\": \"Dermatologia\" },\r\n    { \"name\": \"Ginecologia e Obstetrícia\" },\r\n    { \"name\": \"Pediatria\" },\r\n    { \"name\": \"Clínica Médica\" },\r\n    { \"name\": \"Ortopedia e Traumatologia\" },\r\n    { \"name\": \"Oftalmologia\" },\r\n    { \"name\": \"Psiquiatria\" },\r\n    { \"name\": \"Endocrinologia\" },\r\n    { \"name\": \"Gastroenterologia\" },\r\n    { \"name\": \"Urologia\" },\r\n    { \"name\": \"Neurologia\" },\r\n    { \"name\": \"Otorrinolaringologia\" },\r\n    { \"name\": \"Reumatologia\" },\r\n    { \"name\": \"Oncologia\" },\r\n    { \"name\": \"Nefrologia\" },\r\n    { \"name\": \"Hematologia\" },\r\n    { \"name\": \"Pneumologia\" },\r\n    { \"name\": \"Cirurgia Geral\" },\r\n    { \"name\": \"Alergologia e Imunologia\" },\r\n    { \"name\": \"Medicina de Família e Comunidade\" },\r\n    { \"name\": \"Infectologia\" },\r\n    { \"name\": \"Hepatologia\" },\r\n    { \"name\": \"Medicina do Trabalho\" },\r\n    { \"name\": \"Medicina Esportiva\" },\r\n    { \"name\": \"Medicina Preventiva e Social\" },\r\n    { \"name\": \"Cirurgia Plástica\" },\r\n    { \"name\": \"Cirurgia Cardiovascular\" },\r\n    { \"name\": \"Cirurgia do Aparelho Digestivo\" },\r\n    { \"name\": \"Cirurgia Pediátrica\" },\r\n    { \"name\": \"Geriatria\" },\r\n    { \"name\": \"Mastologia\" },\r\n    { \"name\": \"Dermatologia Cirúrgica\" },\r\n    { \"name\": \"Cirurgia Vascular\" },\r\n    { \"name\": \"Endoscopia\" },\r\n    { \"name\": \"Patologia Clínica/Medicina Laboratorial\" },\r\n    { \"name\": \"Medicina Intensiva\" },\r\n    { \"name\": \"Radiologia e Diagnóstico por Imagem\" },\r\n    { \"name\": \"Radioterapia\" },\r\n    { \"name\": \"Genética Médica\" },\r\n    { \"name\": \"Medicina Física e Reabilitação\" },\r\n    { \"name\": \"Homeopatia\" },\r\n    { \"name\": \"Nutrologia\" },\r\n    { \"name\": \"Acupuntura\" },\r\n    { \"name\": \"Sexologia\" },\r\n    { \"name\": \"Medicina Paliativa\" },\r\n    { \"name\": \"Patologia\" },\r\n    { \"name\": \"Cirurgia Oncológica\" },\r\n    { \"name\": \"Cirurgia Torácica\" },\r\n    { \"name\": \"Neurocirurgia\" },\r\n    { \"name\": \"Medicina Nuclear\" },\r\n    { \"name\": \"Medicina Legal e Perícia Médica\" },\r\n    { \"name\": \"Cirurgia de Cabeça e Pescoço\" },\r\n    { \"name\": \"Medicina do Adolescente\" },\r\n    { \"name\": \"Cuidado Paliativo\" },\r\n    { \"name\": \"Saúde Pública\" },\r\n    { \"name\": \"Angiologia\" },\r\n    { \"name\": \"Cirurgia da Mão\" },\r\n    { \"name\": \"Cirurgia Bariátrica\" },\r\n    { \"name\": \"Dermatologia Pediátrica\" }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicalSpecialty",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalSpecialty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Medical Specialty",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Felipe PC 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicalSpecialty/666487bd7f38c899b656cbd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalSpecialty",
+								"666487bd7f38c899b656cbd3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinic",
+			"item": [
+				{
+					"name": "List Clinic",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/clinic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Clinic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"corporateReason\": \"Clínica São José\",\r\n        \"cnpj\": \"12.345.678/0001-90\",\r\n        \"address\": \"Rua das Flores, 123, Centro, São Paulo, SP\",\r\n        \"phone\": \"(11) 1234-5678\",\r\n        \"email\": \"contato@clinicasaojose.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Médica Central\",\r\n        \"cnpj\": \"23.456.789/0001-01\",\r\n        \"address\": \"Avenida Brasil, 456, Bela Vista, Rio de Janeiro, RJ\",\r\n        \"phone\": \"(21) 2345-6789\",\r\n        \"email\": \"atendimento@clinicamedicacentral.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Vida Saudável\",\r\n        \"cnpj\": \"34.567.890/0001-12\",\r\n        \"address\": \"Rua da Saúde, 789, Centro, Belo Horizonte, MG\",\r\n        \"phone\": \"(31) 3456-7890\",\r\n        \"email\": \"info@clinicavidasaudavel.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Bem Estar\",\r\n        \"cnpj\": \"45.678.901/0001-23\",\r\n        \"address\": \"Avenida das Américas, 101, Barra da Tijuca, Rio de Janeiro, RJ\",\r\n        \"phone\": \"(21) 4567-8901\",\r\n        \"email\": \"contato@clinicabemestar.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Saúde e Vida\",\r\n        \"cnpj\": \"56.789.012/0001-34\",\r\n        \"address\": \"Rua do Bem, 202, Centro, Porto Alegre, RS\",\r\n        \"phone\": \"(51) 5678-9012\",\r\n        \"email\": \"saudevida@clinicasaudevida.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Nova Esperança\",\r\n        \"cnpj\": \"67.890.123/0001-45\",\r\n        \"address\": \"Avenida Esperança, 303, Centro, Curitiba, PR\",\r\n        \"phone\": \"(41) 6789-0123\",\r\n        \"email\": \"contato@clinicanovaesperanca.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Prime Saúde\",\r\n        \"cnpj\": \"78.901.234/0001-56\",\r\n        \"address\": \"Rua das Palmeiras, 404, Centro, Salvador, BA\",\r\n        \"phone\": \"(71) 7890-1234\",\r\n        \"email\": \"prime@clinicaprimesaude.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Excelência Médica\",\r\n        \"cnpj\": \"89.012.345/0001-67\",\r\n        \"address\": \"Avenida da Liberdade, 505, Centro, Recife, PE\",\r\n        \"phone\": \"(81) 8901-2345\",\r\n        \"email\": \"excelencia@clinicaexcelencia.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Saúde Plena\",\r\n        \"cnpj\": \"90.123.456/0001-78\",\r\n        \"address\": \"Rua dos Sonhos, 606, Centro, Fortaleza, CE\",\r\n        \"phone\": \"(85) 9012-3456\",\r\n        \"email\": \"contato@clinicasaudeplena.com\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"corporateReason\": \"Clínica Vida Melhor\",\r\n        \"cnpj\": \"01.234.567/0001-89\",\r\n        \"address\": \"Avenida Principal, 707, Centro, Manaus, AM\",\r\n        \"phone\": \"(92) 0123-4567\",\r\n        \"email\": \"vida@clinicavidamelhor.com\",\r\n        \"status\": true\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Clinic",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"corporateReason\": \"Clínica Médica Central\",\r\n    \"cnpj\": \"23.456.789/0001-01\",\r\n    \"address\": \"Avenida Brasil, 456, Bela Vista, Rio de Janeiro, RJ\",\r\n    \"phone\": \"(21) 2345-6789\",\r\n    \"email\": \"atendimento@clinicamedicacentral.com\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/clinic/666487bd7f38c899b656cbd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"clinic",
+								"666487bd7f38c899b656cbd3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Doctor",
+			"item": [
+				{
+					"name": "List Doctor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Doctor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"crm\": \"12345\",\r\n        \"name\": \"Dr. João Silva\",\r\n        \"email\": \"joao.silva@example.com\",\r\n        \"phone\": \"(11) 1234-5678\",\r\n        \"specialty_id\": \"6665aebd91919202e66974ac\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"crm\": \"54321\",\r\n        \"name\": \"Dra. Maria Santos\",\r\n        \"email\": \"maria.santos@example.com\",\r\n        \"phone\": \"(21) 9876-5432\",\r\n        \"specialty_id\": \"6665aebd91919202e6697491\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a9\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"crm\": \"67890\",\r\n        \"name\": \"Dr. Pedro Oliveira\",\r\n        \"email\": \"pedro.oliveira@example.com\",\r\n        \"phone\": \"(31) 4567-8901\",\r\n        \"specialty_id\": \"6665aebd91919202e6697490\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a5\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"crm\": \"09876\",\r\n        \"name\": \"Dra. Ana Souza\",\r\n        \"email\": \"ana.souza@example.com\",\r\n        \"phone\": \"(41) 7890-1234\",\r\n        \"specialty_id\": \"6665aebd91919202e669748b\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a1\",\r\n        \"status\": true\r\n    },\r\n    {\r\n        \"crm\": \"54321\",\r\n        \"name\": \"Dr. Carlos Silva\",\r\n        \"email\": \"carlos.silva@example.com\",\r\n        \"phone\": \"(51) 0123-4567\",\r\n        \"specialty_id\": \"6665aebd91919202e669748d\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a3\",\r\n        \"status\": true\r\n    }\r\n]\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doctor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"crm\": \"12345\",\r\n    \"name\": \"Dr. João Silva\",\r\n    \"email\": \"joao.silva@example.com\",\r\n    \"phone\": \"(11) 1234-5678\",\r\n    \"specialty_id\": \"6665aebd91919202e66974ac\",\r\n    \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n    \"status\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/doctor/666487bd7f38c899b656cbd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"doctor",
+								"666487bd7f38c899b656cbd3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "[X] - List Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Felipe Monteiro\",\r\n    \"email\": \"felipe.monteiro@vidaconnect.comm\",\r\n    \"password\":\"123\",\r\n    \"phone\":\"40028922\",\r\n    \"status\": \"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Felipe Monteiro\",\r\n    \"email\": \"felipe.monteiro@vidaconnect.comm\",\r\n    \"password\":\"123\",\r\n    \"phone\":\"40028922\",\r\n    \"status\": \"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee/666487bd7f38c899b656cbd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"666487bd7f38c899b656cbd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[X] - Delete Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/user/666487bd7f38c899b656cbd3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"user",
+								"666487bd7f38c899b656cbd3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[X] - Find Employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/employee/6665e3f665c8aa171f4c548f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"6665e3f665c8aa171f4c548f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"felipe.monteiro@vidaconnect.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/employee/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"employee",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exam",
+			"item": [
+				{
+					"name": "List Exam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/exam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Exam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient_id\": \"6665c2b80eaa5cd4a3baba52\",\r\n    \"type_examination_id\": \"6665aa00d8c2a5d18e6f0103\",\r\n    \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n    \"date\": \"2024-06-09T12:00:00.000Z\",\r\n    \"status\": \"PENDING\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/exam",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exam"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Exam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient_id\": \"6665c2b80eaa5cd4a3baba52\",\r\n    \"type_examination_id\": \"6665aa00d8c2a5d18e6f0103\",\r\n    \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n    \"date\": \"2024-06-09T12:00:00.000Z\",\r\n    \"status\": \"DONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/exam/6665e20b5c855e75900683bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exam",
+								"6665e20b5c855e75900683bc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Exam",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/exam/6665e20b5c855e75900683bc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"exam",
+								"6665e20b5c855e75900683bc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medical Appointment",
+			"item": [
+				{
+					"name": "List Medical Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medicalAppointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Medical Appointment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"symptoms\": \"Dor de cabeça\",\r\n        \"medicalHistory\": \"Sem histórico médico relevante\",\r\n        \"date\": \"2024-06-09T12:00:00.000Z\",\r\n        \"reason\": \"Consulta de rotina\",\r\n        \"patient_id\": \"6665c2b80eaa5cd4a3baba52\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n        \"doctor_id\": \"6665cfdb7db61f21dd398e87\",\r\n        \"status\": \"PENDING\"\r\n    },\r\n    {\r\n        \"symptoms\": \"Febre e tosse\",\r\n        \"medicalHistory\": \"Histórico de alergia a medicamentos\",\r\n        \"date\": \"2024-06-10T14:00:00.000Z\",\r\n        \"reason\": \"Consulta por sintomas\",\r\n        \"patient_id\": \"6665c2b80eaa5cd4a3baba54\",\r\n        \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n        \"doctor_id\": \"6665cfdb7db61f21dd398e87\",\r\n        \"status\": \"PENDING\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicalAppointment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalAppointment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Medical Appointment",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symptoms\": \"Dor de cabeça\",\r\n    \"medicalHistory\": \"Sem histórico médico relevante\",\r\n    \"date\": \"2024-06-09T12:00:00.000Z\",\r\n    \"reason\": \"Consulta de rotina\",\r\n    \"patient_id\": \"6665c2b80eaa5cd4a3baba52\",\r\n    \"clinic_id\": \"6665b890e67a170f0897f9a4\",\r\n    \"doctor_id\": \"6665cfdb7db61f21dd398e87\",\r\n    \"status\": \"DONE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/medicalAppointment/6665e5f77d50e72281402170",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalAppointment",
+								"6665e5f77d50e72281402170"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Medical Appointment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/medicalAppointment/6665e5f77d50e72281402170",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"medicalAppointment",
+								"6665e5f77d50e72281402170"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
