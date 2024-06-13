@@ -3,7 +3,7 @@ import MedicalAppointment from "../models/medicalAppointment"
 
 export const listMedicalAppointment = async () => {
     await databaseConnection()
-    const medicalAppointmentList = await MedicalAppointment.find().populate("patient_id").populate("clinic_id", "corporateReason")
+    const medicalAppointmentList = await MedicalAppointment.find().populate("patient_id").populate("clinic_id").populate("doctor_id")
     return medicalAppointmentList
 }
 

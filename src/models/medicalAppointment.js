@@ -7,6 +7,7 @@ const MedicalAppointmentSchema = new mongoose.Schema({
     reason : {type: String, required: true},
     patient_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient'  }, 
     clinic_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Clinic' },
+    doctor_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Doctor' },
     status: { type: String, required: true, default: "PENDING" },
 }, {collection: 'tbl_medical_appointment'})
 
