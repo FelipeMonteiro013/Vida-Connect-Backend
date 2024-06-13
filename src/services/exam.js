@@ -3,7 +3,7 @@ import Exam from "../models/exam";
 
 export const listExams = async () => {
     await databaseConnection()
-    const examList = await Exam.find()
+    const examList = await Exam.find().populate("patient_id", "name").populate("type_examination_id", "name").populate("clinic_id", "corporateReason")
     return examList
 }
 

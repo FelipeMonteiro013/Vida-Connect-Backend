@@ -5,6 +5,7 @@ import {
   deletePatient,
   updatePatient,
   findPatientById,
+  findPatientByDocument,
   loginPatient
 } from "../services/patient";
 
@@ -46,9 +47,18 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+// router.get("/:id", async (req, res) => {
+//   try {
+//     const patient = await findPatientById(req.params.id);
+//     res.status(200).send(patient);
+//   } catch (error) {
+//     res.status(400).send(error);
+//   }
+// });
+
+router.get("/:document", async (req, res) => {
   try {
-    const patient = await findPatientById(req.params.id);
+    const patient = await findPatientByDocument(req.params.document);
     res.status(200).send(patient);
   } catch (error) {
     res.status(400).send(error);
@@ -58,10 +68,6 @@ router.get("/:id", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const patient = await loginPatient(req.body)
-
-    if (!patient) {
-      res.send()
-    }
 
     res.send(patient)
 

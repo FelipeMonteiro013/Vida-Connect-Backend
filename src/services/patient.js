@@ -30,6 +30,12 @@ export const findPatientById = async (id) => {
     return patient
 }
 
+export const findPatientByDocument = async (document) => {
+    await databaseConnection();
+    const patient = await Patient.findOne({ document: document });
+    return patient ;
+};
+
 export const loginPatient = async (data) => {
 
     await databaseConnection()
@@ -39,11 +45,11 @@ export const loginPatient = async (data) => {
     const response = await Patient.findOne({ email }).select("+password")
 
     if (!response) {
-        return "User not found!"
+        return {}
     }
 
     if (response.password != password) {
-        return "Invalid password!"
+        return {}
     }
 
     response.password = undefined

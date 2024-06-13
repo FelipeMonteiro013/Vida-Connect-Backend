@@ -5,8 +5,8 @@ const DoctorSchema = new mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true },
-    specialty_id: { type: String, required: true, alias: 'specialtyId' },
-    clinic_id: { type: String, required: true, alias: 'clinicId' },
+    specialty_id: { type: mongoose.Schema.Types.ObjectId, ref: 'MedicalSpecialty' },
+    clinic_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Clinic' },
     status: { type: Boolean, required: true, default: true },
 }, { collection: 'tbl_doctor' })
 

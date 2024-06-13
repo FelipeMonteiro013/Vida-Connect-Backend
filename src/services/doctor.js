@@ -3,7 +3,7 @@ import Doctor from "../models/doctor";
 
 export const listDoctor = async () => {
     await databaseConnection()
-    const doctorList = await Doctor.find()
+    const doctorList = await Doctor.find().populate("specialty_id", "name").populate("clinic_id", "corporateReason")
     return doctorList;
 }
 

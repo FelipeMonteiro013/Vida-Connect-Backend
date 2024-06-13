@@ -5,8 +5,8 @@ const MedicalAppointmentSchema = new mongoose.Schema({
     medicalHistory: {type: String, required: false},
     date: {type: Date, required: true, default: Date.now},
     reason : {type: String, required: true},
-    patient_id: {type: String, required: true, alias: "patientId"},
-    clinic_id: {type: String, required: true, alias: "clinicId"},
+    patient_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Patient'  }, 
+    clinic_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Clinic' },
     status: { type: String, required: true, default: "PENDING" },
 }, {collection: 'tbl_medical_appointment'})
 
