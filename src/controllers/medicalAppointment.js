@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { listMedicalAppointment, createMedicalAppointment, updateMedicalAppointment, findMedicalAppointmentById } from "../services/medicalAppointment";
+import { listMedicalAppointment, createMedicalAppointment, updateMedicalAppointment, findMedicalAppointmentById, findMedicalAppointmentByPatientId } from "../services/medicalAppointment";
 
 const router = Router()
 
@@ -39,5 +39,13 @@ router.get("/:medicalAppointmentId", async (req, res) => {
     }
 })
 
+router.get("/patient/:patientId/", async (req, res) => {
+    try {
+        const medicalAppointments = await findMedicalAppointmentByPatientId(req.params.patientId);
+        res.status(200).send(medicalAppointments);
+    } catch (error) {
+        res.status(400).send(error);
+    }
+});
 
 export default router;
