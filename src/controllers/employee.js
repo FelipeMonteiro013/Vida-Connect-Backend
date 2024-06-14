@@ -60,9 +60,6 @@ router.post("/login", async (req, res) => {
   try {
     const employee = await loginEmployee(req.body)
 
-    if (!employee) {
-      res.send()
-    }
     res.send(employee)
     
   } catch (error) {

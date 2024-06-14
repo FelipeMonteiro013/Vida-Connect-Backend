@@ -40,11 +40,11 @@ export const loginEmployee = async (data) => {
     const response = await Employee.findOne({ email }).select("+password")
 
     if (!response) {
-        return "User not found!"
+        return {}
     }
 
     if (response.password != password) {
-        return "Invalid password!"
+        return {}
     }
 
     response.password = undefined
