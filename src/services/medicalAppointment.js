@@ -26,6 +26,6 @@ export const findMedicalAppointmentById = async (id) => {
 
 export const findMedicalAppointmentByPatientId = async (patientId) => {
     await databaseConnection();
-    const medicalAppointments = await MedicalAppointment.find({ "patient_id": patientId });
+    const medicalAppointments = await MedicalAppointment.find({ "patient_id": patientId }).populate("patient_id").populate("clinic_id").populate("doctor_id");
     return medicalAppointments;
 };
